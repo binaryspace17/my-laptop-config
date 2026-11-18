@@ -1,0 +1,5 @@
+
+[theme.templates.user.noctalia-fluent]
+input_path  = "~/.config/noctalia/templates/Noctalia-Fluent.sh"
+output_path = "~/.cache/noctalia/Noctalia-Fluent-apply.sh"
+post_hook   = "bash ~/.cache/noctalia/Noctalia-Fluent-apply.sh"

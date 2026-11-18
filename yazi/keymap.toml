@@ -1,0 +1,55 @@
+[mgr]
+keymap = [
+  # Navigation (Arrows, PageUp/Down, Home/End)
+  { on = "<Up>", run = "arrow prev", desc = "Move cursor up" },
+  { on = "<Down>", run = "arrow next", desc = "Move cursor down" },
+  { on = "<Left>", run = "leave", desc = "Go to parent directory" },
+  { on = "<Right>", run = "enter", desc = "Enter directory" },
+  { on = "<Backspace>", run = "leave", desc = "Go to parent directory" },
+  { on = "<PageUp>", run = "arrow -100%", desc = "Page up" },
+  { on = "<PageDown>", run = "arrow 100%", desc = "Page down" },
+  { on = "<Home>", run = "arrow top", desc = "Jump to top" },
+  { on = "<End>", run = "arrow bot", desc = "Jump to bottom" },
+  { on = "<t>", run = "plugin trash", desc = "Go to trash bin" },
+  { on = "<h>", run = "cd ~", desc = "Go to home directory" },
+
+  # Open & Quit
+  { on = "<Enter>", run = "open", desc = "Open selected files" },
+  { on = "<S-Enter>", run = "open --interactive", desc = "Open with..." },
+  { on = "<Esc>", run = "escape", desc = "Clear selection / cancel" },
+  { on = "<C-q>", run = "quit", desc = "Quit Yazi" },
+
+
+  # Selection
+  { on = "<Space>", run = [ "toggle"], desc = "Select file" },
+  { on = "<C-a>", run = "toggle_all --state=on", desc = "Select all" },
+
+  # Standard File Operations
+  { on = "<C-c>", run = "yank", desc = "Copy selected files" },
+  { on = "<C-x>", run = "yank --cut", desc = "Cut selected files" },
+  { on = "<C-v>", run = "paste", desc = "Paste files" },
+  { on = "<Delete>", run = "remove", desc = "Move to trash" },
+  { on = "<S-Delete>", run = "remove --permanently", desc = "Delete permanently" },
+  { on = "<C-r>", run = "rename --cursor=before_ext", desc = "Rename file or folder" },
+  { on = "<C-n>", run = "create", desc = "Create new file or folder (end with /)" },
+  { on = "<C-e>", run = '''shell 'for f in "$@"; do case "$f" in *.zip) unzip "$f" ;; *.tar.gz|*.tgz) tar -xzvf "$f" ;; esac; done' --confirm''', desc = "Extract zip or tar.gz" },
+
+
+
+
+  # Search, View & Tabs
+  { on = "<C-f>", run = "filter --smart", desc = "Filter files" },
+  { on = "<C-h>", run = "hidden toggle", desc = "Toggle hidden files" },
+  { on = "<Tab>", run = "spot", desc = "File properties" },
+  { on = "<C-t>", run = "tab_create --current", desc = "New tab" },
+  { on = "<C-w>", run = "close", desc = "Close tab" },
+  { on = "<F1>", run = "help", desc = "Show help menu" },
+  { on = "<+>", run = "plugin zoom 1", desc = "zoom in hovered file" },
+  { on = "<_>", run = "plugin zoom -1", desc = "zoom oit hovered file" },
+]
+
+# Make Esc close input boxes immediately instead of entering Vim normal mode
+[input]
+prepend_keymap = [
+  { on = "<Esc>", run = "close", desc = "Cancel input" },
+]

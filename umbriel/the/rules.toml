@@ -1,0 +1,72 @@
+[[window_rule]]
+blur = true
+
+[[window_rule]]
+match.app_id = "^dev.noctalia.Noctalia$"
+default_floating = true
+default_floating_size_px = { width = 1020, height = 900 }
+
+[[window_rule]]
+match.app_id = "^dev.noctalia.UmbrielSharePicker$"
+default_floating = true
+default_floating_size_px = { width = 800, height = 600 }
+
+[[window_rule]]
+match.title = "^(Picture-in-Picture|Picture in picture)$"
+default_floating = true
+default_maximize = false
+default_position = { x = 20, y = 20, anchor = "bottom_right" }
+
+[[window_rule]]
+match.title = "^notificationtoasts_.+_desktop"
+default_position = { x = 0, y = 0, anchor = "bottom_right" }
+default_focused = false
+default_pinned = true
+
+[[window_rule]]
+match.app_id = "^sonora$"
+default_scratchpad = "music"
+
+# Keep game menus inside their window; a focus or workspace keybind releases the pointer.
+# [[window_rule]]
+# match.app_id = "^steam_app_.*$"
+# confine_pointer = true
+
+# Scroll more slowly on the touchpad in one application.
+# [[window_rule]]
+# match.app_id = "^chromium$"
+# touchpad_scroll_factor = 0.5
+
+# Show title bars only when the window's workspace uses the stacking layout.
+# Keep [appearance.title_bar] mode = "off" for other layouts.
+# [[window_rule]]
+# match.layout = "stacking"
+# title_bar = "on"
+
+# Keep compositor shortcuts available while a virtual machine window is focused.
+# [[window_rule]]
+# match.app_id = "^virt-manager$"
+# allow_shortcuts_inhibit = false
+
+# Keep an application drawing while it is hidden on another workspace, for programs whose other work stalls without it.
+# [[window_rule]]
+# match.app_id = "^obs$"
+# background_render = true
+
+# Keep matching windows visible locally but absent from screenshots and recordings.
+# See docs/user/window-rules.md#capture-protection.
+# [[window_rule]]
+# match.app_id = "^private-app$"
+# block_capture = true
+
+# Keep one application's modal dialogs as ordinary windows.
+# [[window_rule]]
+# match.app_id = "^gimp"
+# match.is_dialog = true
+# attach_to_parent = false
+
+[overview]
+workspace_wallpaper = false
+
+[colors.overview]
+workspace_background = "#00000000" # Fully transparent (uses #RRGGBBAA format)

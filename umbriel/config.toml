@@ -1,0 +1,17 @@
+[include]
+files = [
+    "the/animations.toml",
+    "the/keybinds.toml",
+    "the/general.toml",
+    "the/output.toml",
+    "the/appearance.toml",
+    "the/input.toml",
+    "the/events.toml",
+    "the/layout.toml",
+    "the/workspaces.toml",
+    "the/rules.toml",
+    "the/layer_rules.toml"
+]
+
+[include.optional]
+files = ["noctalia.toml"]

@@ -1,0 +1,4 @@
+{
+	"Ctrl-b": "command:tree",
+	"Ctrl-p": "command:fzf"
+}

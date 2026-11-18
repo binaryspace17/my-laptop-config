@@ -1,0 +1,8 @@
+include "noctalia"
+
+
+color-link cursor-line "#C5BEB5"
+color-link constant.string "#333331"
+color-link constant "#555551"
+color-link constant.bool "#555551"
+color-link constant.number "#555551"

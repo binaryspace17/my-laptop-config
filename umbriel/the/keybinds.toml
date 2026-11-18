@@ -1,0 +1,67 @@
+[keybinds]
+
+"Mod+T" = { action = "spawn kitty"}
+"Mod+E" = { action = "spawn luciole"}
+"Mod+W" = { action = "spawn helium-browser"}
+"Mod+C" = { action = "spawn kitty -e micro"}
+
+
+
+"Mod+Tab" = "window-focus-next"
+"Mod+Space" = "window-toggle-floating"
+"Mod+P" = "window-toggle-pinned"
+"Mod+F" = "window-toggle-maximize-to-edges"
+"Mod+Q" = "window-close"
+"Mod+O" = "overview-toggle"
+
+# I have these set for just 4 workspaces but likely be able to go up to 9
+# just copy/paste and change for additional 5+
+"Mod+1" = "workspace-switch 1"
+"Mod+Alt+1" = "window-move-to-workspace 1"
+"Mod+2" = "workspace-switch 2"
+"Mod+Alt+2" = "window-move-to-workspace 2"
+"Mod+3" = "workspace-switch 3"
+"Mod+Alt+3" = "window-move-to-workspace 3"
+"Mod+4" = "workspace-switch 4"
+"Mod+Alt+4" = "window-move-to-workspace 4"
+"Mod+5" = "workspace-switch 5"
+"Mod+Alt+5" = "window-move-to-workspace 5"
+
+
+
+# scratchpads!
+"Mod+Shift+M" = "window-toggle-scratchpad music"
+"Mod+M" = "scratchpad-toggle music"
+
+
+# nothing to crazy to move focust and i like it simple lol
+"Mod+Left" = "window-focus-left"
+"Mod+Down" = "window-focus-down"
+"Mod+Up" = "window-focus-up"
+"Mod+Right" = "window-focus-right"
+
+# ---noctalia---
+"Mod" = { action = "spawn noctalia msg panel-toggle launcher"}
+"Mod+L" = { action = "spawn noctalia msg session lock"}
+"Mod+Shift+W" = { action = "spawn noctalia msg panel-toggle wallpaper"}
+"Mod+V" = { action = "spawn noctalia msg panel-toggle clipboard"}
+"Mod+Comma" = { action = "spawn noctalia msg settings-toggle"}
+"Mod+Shift+C" = { action = "spawn noctalia msg panel-toggle control-center"}
+"Mod+N" = { action = "spawn noctalia msg panel-toggle control-center notifications"}
+"Mod+I" = { action = "spawn noctalia msg bar-toggle"}
+"Ctrl+Shift+Escape" = { action = "spawn noctalia msg panel-toggle control-center system"}
+"Mod+Shift+T" = { action = "spawn noctalia msg panel-toggle tray-drawer"}
+"Mod+Shift+S" = { action = "spawn noctalia msg screenshot-region"}
+"Mod+Escape" = { action = "spawn noctalia msg panel-toggle session"}
+"Mod+B" = { action = "spawn noctalia msg panel-toggle control-center power"}
+
+
+# this
+"XF86AudioRaiseVolume" = { action = "spawn noctalia msg volume-up", allow_when_locked = true }
+"XF86AudioLowerVolume" = { action = "spawn noctalia msg volume-down", allow_when_locked = true }
+"XF86AudioMute" = { action = "spawn noctalia msg volume-mute", allow_when_locked = true, repeat = false }
+"XF86AudioPlay" = { action = "spawn noctalia msg media toggle", allow_when_locked = true, repeat = false }
+"XF86AudioNext" = { action = "spawn noctalia msg media next", allow_when_locked = true }
+"XF86AudioPrev" = { action = "spawn noctalia msg media previous", allow_when_locked = true }
+"XF86MonBrightnessUp" = { action = "spawn noctalia msg brightness-up", allow_when_locked = true }
+"XF86MonBrightnessDown" = { action = "spawn noctalia msg brightness-down", allow_when_locked = true }

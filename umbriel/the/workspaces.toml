@@ -1,0 +1,5 @@
+
+[[scratchpad]]
+name = "music"
+spawn_when_empty = "Sonora"
+hide_when_empty = true

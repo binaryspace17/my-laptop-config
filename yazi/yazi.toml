@@ -1,0 +1,52 @@
+# 1. File Manager Layout & Sorting
+[mgr]
+ratio = [1, 4, 3]         # Width ratios: parent (1), current (4), preview (3)
+sort_by = "natural"       # Sort numbers naturally (e.g., 1.txt, 2.txt, 10.txt)
+sort_sensitive = false    # Ignore uppercase/lowercase when sorting
+sort_dir_first = true     # Show folders above files
+sort_reverse = false      # Normal ascending order
+show_hidden = false       # Hide dotfiles by default (toggle with your keybind)
+linemode = "size"         # Show file size on the right side ("size", "mtime", "permissions", or "none")
+
+# 2. Preview Pane Settings
+[preview]
+wrap = "no"               # Wrap long text lines ("yes" or "no")
+tab_size = 2              # Spaces per tab in code previews
+max_width = 600           # Max image preview width in pixels
+max_height = 900          # Max image preview height in pixels
+image_quality = 75        # Image cache quality (50-90)
+
+# 3. Default Applications (Openers)
+[opener]
+edit = [
+  { run = 'micro %s', desc = "micro", block = true, for = "unix" },
+]
+open = [
+  { run = 'xdg-open %s1', desc = "System Default", for = "unix" },
+]
+play = [
+  { run = 'mpv %s', desc = "MPV", orphan = true, for = "unix" },
+]
+browser = [
+  { run = 'xdg-open %s', desc = "Open in the browser", orphan = true, for = "unix" },
+]
+
+
+
+# 4. File-Type Rules (Link file types to the openers above)
+[open]
+prepend_rules = [
+  { mime = "text/html", use = [ "browser", "edit", "reveal" ] },
+  { mime = "text/*", use = [ "edit", "open" ] },
+  { mime = "application/{json,x-ndjson,javascript,xml}", use = [ "edit", "open" ] },
+  { mime = "video/*", use = [ "play", "open" ] },
+  { mime = "audio/*", use = [ "play", "open" ] },
+  { mime = "inode/{x-empty,empty}", use = "micro" },
+  { mime = "text/*", use = "micro" },
+  { url = "*.toml", use = "micro" },
+  { url = "*.json", use = "micro" },
+  { url = "*.yaml", use = "micro" },
+  { url = "*.yml", use = "micro" },
+  { url = "*.md", use = "micro" },
+  { url = "*.txt", use = "micro" },
+]

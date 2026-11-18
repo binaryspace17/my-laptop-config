@@ -1,0 +1,6 @@
+[output.eDP-1]
+mode = "1920x1080@60.00"
+position = [0, 0]
+scale = 1
+hdr = "auto"
+workspaces = 5
