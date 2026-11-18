@@ -1,0 +1,259 @@
+[audio]
+enable_overdrive = true
+
+[bar.default]
+background_opacity = 0.92999997921288013
+center = [ "arch" ]
+end = [ "bar", "spacer_2", "workspaces" ]
+margin_edge = 4
+margin_ends = 300
+radius = 0
+start = [ "spacer1", "active_window" ]
+
+[calendar]
+
+[control_center]
+hidden_tabs = [ "monitor", "weather", "screen-time" ]
+sidebar = "full"
+
+    [control_center.calendar]
+    show_events_card = false
+
+    [[control_center.shortcuts]]
+    type = "wifi"
+
+    [[control_center.shortcuts]]
+    type = "bluetooth"
+
+    [[control_center.shortcuts]]
+    type = "caffeine"
+
+    [[control_center.shortcuts]]
+    type = "notification"
+
+    [[control_center.shortcuts]]
+    type = "power_profile"
+
+[desktop_widgets]
+schema_version = 2
+widget_order = []
+
+    [desktop_widgets.grid]
+    cell_size = 16
+    major_interval = 4
+    visible = true
+
+    [desktop_widgets.widget]
+
+[hooks]
+colors_changed = "~/.local/bin/fix-micro.sh"
+started = "~/.local/bin/fix-micro.sh"
+theme_mode_changed = "~/.local/bin/fix-micro.sh"
+wallpaper_changed = "~/.local/bin/wall-palette.sh"
+
+[idle]
+behavior_order = [ "lock", "screen-off", "lock-and-suspend" ]
+
+    [idle.behavior.lock]
+    action = "lock"
+    enabled = true
+    timeout = 600.0
+
+    [idle.behavior.lock-and-suspend]
+    action = "lock_and_suspend"
+    enabled = false
+    timeout = 900.0
+
+    [idle.behavior.screen-off]
+    action = "screen_off"
+    enabled = true
+    timeout = 730.0
+
+[location]
+address = "Jakarta, indonesia"
+sunrise = "05:55"
+sunset = "18:05"
+
+[lockscreen]
+blur_intensity = 0.48999998904764652
+dnd = true
+
+[lockscreen_widgets]
+schema_version = 2
+widget_order = [ "lockscreen-login-box@eDP-1" ]
+
+    [lockscreen_widgets.grid]
+    cell_size = 16
+    major_interval = 4
+    visible = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@eDP-1"]
+    box_height = 196.0
+    box_width = 810.0
+    cx = 960.0
+    cy = 898.0
+    output = "eDP-1"
+    placement_height = 1080.0
+    placement_width = 1920.0
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@eDP-1".settings]
+        background_color = "surface_container"
+        background_opacity = 0.88
+        background_radius = 12.0
+        center_password_text = false
+        input_opacity = 1.0
+        input_radius = 6.0
+        layout = "regular"
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = true
+        show_media = true
+        show_password_reveal = true
+        show_session_buttons = true
+        show_unlock_hint = true
+        show_weather = true
+
+[plugin_settings."ezio-noir/umbriel-submap"]
+enable_osd = true
+
+[plugins]
+enabled = [ "noctalia/screen_recorder", "noctalia/umbriel-companion" ]
+
+[shell]
+app_icon_color = "primary"
+circular_avatar = false
+corner_radius_scale = 0.0
+font_family = "Annotation Mono"
+password_style = "random"
+polkit_agent = true
+umbriel_audio_provider_enabled = true
+umbriel_overview_type_to_launch_enabled = true
+
+    [shell.launcher]
+    categories = false
+    colorize_icons = true
+    layout = "simple"
+
+    [shell.screen_corners]
+    size = 1
+
+    [shell.screenshot]
+    confirm_region = true
+    directory = "/home/amm/Pictures/Screenshots"
+    region_dim_opacity = 0.65999998524785042
+
+    [shell.session]
+    show_shortcuts = false
+
+        [[shell.session.actions]]
+        action = "shutdown"
+        countdown_seconds = 0.0
+        enabled = true
+        shortcut = "1"
+        variant = "destructive"
+
+        [[shell.session.actions]]
+        action = "reboot"
+        countdown_seconds = 0.0
+        enabled = true
+        shortcut = "2"
+        variant = "default"
+
+        [[shell.session.actions]]
+        action = "lock_and_suspend"
+        countdown_seconds = 0.0
+        enabled = true
+        shortcut = "3"
+        variant = "default"
+
+        [[shell.session.actions]]
+        action = "logout"
+        countdown_seconds = 0.0
+        enabled = true
+        shortcut = "4"
+        variant = "default"
+
+        [[shell.session.actions]]
+        action = "lock"
+        countdown_seconds = 0.0
+        enabled = false
+        shortcut = "1"
+        variant = "default"
+
+[theme]
+builtin = "Catppuccin"
+community_palette = "Vesper"
+custom_palette = "Brume"
+mode = "light"
+source = "custom"
+wallpaper_scheme = "m3-tonal-spot"
+
+    [theme.templates]
+    builtin_ids = [ "gtk3", "gtk4", "kitty", "qt", "umbriel" ]
+    community_ids = [ "sonora", "qutebrowser", "discord", "micro", "zed", "starship", "yazi" ]
+
+        [theme.templates.user.luciole]
+        input_path = "~/.config/noctalia/templates/luciole.toml"
+        output_path = "~/.config/luciole/colors.toml"
+
+        [theme.templates.user.noctalia-fluent]
+        input_path = "~/.config/noctalia/templates/Noctalia-Fluent.sh"
+        output_path = "~/.cache/noctalia/Noctalia-Fluent-apply.sh"
+        post_hook = "bash ~/.cache/noctalia/Noctalia-Fluent-apply.sh"
+
+[wallpaper]
+directory = "/home/amm/Pictures/Wallpapers"
+directory_dark = "/home/amm/Pictures/Wallpapers/dark"
+directory_light = "/home/amm/Pictures/Wallpapers/light"
+fill_color = "primary_container"
+transition_duration = 1400
+
+    [wallpaper.automation]
+    order = "alphabetical"
+
+    [wallpaper.default]
+    path = "/home/amm/Pictures/Wallpapers/light/brume/Monet_The_Thames_at_Westminster_1871_Westminster.jpg"
+
+    [wallpaper.last]
+    path = "/home/amm/Pictures/Wallpapers/light/brume/Monet_The_Thames_at_Westminster_1871_Westminster.jpg"
+
+    [wallpaper.monitors.eDP-1]
+    path = "/home/amm/Pictures/Wallpapers/light/brume/Monet_The_Thames_at_Westminster_1871_Westminster.jpg"
+
+[widget.active_window]
+colorize_icons = true
+display = "text_only"
+show_glyph = false
+
+[widget.arch]
+custom_label = "arch!"
+font_family = "FreeMono"
+length = 0
+type = "spacer"
+
+[widget.bar]
+show_glyph = false
+show_layout_name = true
+type = "noctalia/umbriel-companion:bar"
+
+[widget.spacer1]
+color = "primary"
+custom_label = "roz@arch:"
+length = 0
+type = "spacer"
+
+[widget.spacer_2]
+type = "spacer"
+
+[widget.tray]
+drawer = true
+drawer_columns = 5
+drawer_item_size = 35.0
+
+[widget.workspaces]
+empty_color = "on_secondary"
+occupied_color = "primary_container"
+separator = "|"
+style = "minimal"
